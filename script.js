@@ -34,10 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (event.target.classList.contains('add-card')) {
                 // self.addCard(new Card(prompt("Enter the name of the card")));
                 var cardName = prompt("Enter the name of the card");
-                if (cardName === null) {
-                    null;
-                }
-                else {
+                if (cardName != null) {
                     self.addCard(new Card(cardName));
                 }
 
@@ -98,10 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('#board .create-column').addEventListener('click', function() {
         var name = prompt('Enter a column name');
-        if (name === null) {
-            null;
-        }
-        else {
+        if (name != null) {
             var column = new Column(name);
             board.addColumn(column);
         }

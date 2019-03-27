@@ -1,7 +1,12 @@
+.body {
+  height: 100%;
+}
+
 .board {
   position: relative;
   background-color: #C4E538;
   padding: 40px;
+  height: 100%;
 }
 
 .board h1, .board h2 {
@@ -72,6 +77,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 75vh;
+}
+
+.board .column-container .column .add-card, .board .column-container .column .column-btn-delete {
+  position: absolute;
+}
+
+.board .column-container .column .add-card {
+  top: 270px;
+}
+
+.board .column-container .column .column-btn-delete {
+  top: 330px;
 }
 
 .board button {

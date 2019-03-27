@@ -1,7 +1,11 @@
+.body {
+    height: 100%;
+}
 .board {
     position: relative;
     background-color: #C4E538;
     padding: 40px;
+    height: 100%;
     h1, h2 {
         text-align: center;
         font-size: 20px;
@@ -44,6 +48,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 75vh;
+            .add-card, .column-btn-delete {
+                position: absolute;
+            }
+            .add-card {
+                top: 270px;
+            }
+            .column-btn-delete {
+                top: 330px;
+            }
         }
     }
     button {
