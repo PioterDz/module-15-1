@@ -4,17 +4,23 @@ function Phone(brand, price, color, resolution, battery) {
     this.color = color;
     this.resolution = resolution;
     this.battery = battery;
+    this.warrantyCost;
 }
 
-Phone.prototype.warrantyCost = function() {
-    this.warrantyCost = this.price * 0.1;
+var warrantyCost;
+Phone.prototype.getWarrantyCost = function(price) {
+    warrantyCost = price * 0.1;
+    return warrantyCost;
 }
 
 Phone.prototype.printInfo = function() {
+
     console.log('The phone brand is ' + this.brand + ', the color is ' + this.color + ', and the price is ' + this.price);
     console.log('The resolution is ' + this.resolution + 'and battery is ' + this.battery);
-    console.log('The warranty cost is ' + this.warrantyCost);
+   
+    console.log('The warranty cost is ' + warrantyCost);
 }
+
 
 
 var GalaxyS6 = new Phone('samsung', 200, 'black', '5,1', '2550mAh');
