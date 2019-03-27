@@ -4,13 +4,11 @@ function Phone(brand, price, color, resolution, battery) {
     this.color = color;
     this.resolution = resolution;
     this.battery = battery;
-    this.warrantyCost;
 }
 
-var warrantyCost;
-Phone.prototype.getWarrantyCost = function(price) {
-    warrantyCost = price * 0.1;
-    return warrantyCost;
+
+Phone.prototype.getWarrantyCost = function() {
+    return this.price * 0.1;
 }
 
 Phone.prototype.printInfo = function() {
@@ -18,7 +16,7 @@ Phone.prototype.printInfo = function() {
     console.log('The phone brand is ' + this.brand + ', the color is ' + this.color + ', and the price is ' + this.price);
     console.log('The resolution is ' + this.resolution + 'and battery is ' + this.battery);
    
-    console.log('The warranty cost is ' + warrantyCost);
+    console.log('The warranty cost is ' + this.getWarrantyCost());
 }
 
 
