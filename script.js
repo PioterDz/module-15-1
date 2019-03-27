@@ -28,12 +28,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         this.element.querySelector('.column').addEventListener('click', function (event) {
             if (event.target.classList.contains('btn-delete')) {
-              self.removeColumn();
+                self.removeColumn();
             }
         
             if (event.target.classList.contains('add-card')) {
-              self.addCard(new Card(prompt("Enter the name of the card")));
+                // self.addCard(new Card(prompt("Enter the name of the card")));
+                var cardName = prompt("Enter the name of the card");
+                if (cardName === null) {
+                    null;
+                }
+                else {
+                    self.addCard(new Card(cardName));
+                }
+
             }
+
         });
     }
 
@@ -89,8 +98,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('#board .create-column').addEventListener('click', function() {
         var name = prompt('Enter a column name');
-        var column = new Column(name);
-        board.addColumn(column);
+        if (name === null) {
+            null;
+        }
+        else {
+            var column = new Column(name);
+            board.addColumn(column);
+        }
     });
 
     // CREATING COLUMNS
